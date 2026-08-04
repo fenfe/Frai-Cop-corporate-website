@@ -1,0 +1,268 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+   /* Defaults for all content */
+  html, body {
+    border: 2px solid black;
+    font-family: "Inter", sans-serif; 
+    font-size: 14px;
+    line-height: 1.5;
+    color: #F2F2F2;
+    /* background-color: #fff; */
+    min-height: 100vh;        /* Forces body to take full screen height */
+    padding: 0;               /* Removes default browser margins/paddings */
+    margin: 0;
+    overflow-x: hidden; /* Cuts off anything pushed off the left or right edges */
+  
+  }
+  
+  /* 3. Media Reset (Crucial for layouts) */
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: #F2F2F2;
+  }
+  /* ==========================================================================
+     DEFAULT MOBILE STYLES (Applies to mobile phones by default)
+     ========================================================================== */
+  .navbar {
+    padding: 20px;
+    border: 1px solid blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* FIX 2: Ensure it stays on top of the hero overlay layers */
+    z-index: 10; 
+    
+    /* FIX 3: Make background completely clear */
+    background-color: transparent; 
+  
+  }
+  .nav-container {
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* display: flex; */
+  }   
+  /* 1. Hide the links menu by default on mobile */
+  .nav-links {
+    position: absolute;
+    top: 70px; 
+    right: 5%;
+    width: 50%;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    font-weight: bolder;
+     /* FIX 1: Keep it as a flex container so child links stack correctly */
+     display: flex; 
+     /* FIX 2: Hide it by sliding it 120% to the right and making it invisible */
+    opacity: 0;
+    transform: translateX(120%);
+    pointer-events: none; /* Prevents users from clicking hidden links */
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+  z-index: 100;
+    
+  }
+  .nav-links a {
+    color: #333333;
+    text-decoration: none;
+    padding: 10px 0;
+    /* border: 1px solid black; */
+    text-align: left;
+  }
+  
+  /* THE SLIDE-IN EFFECT WHEN ACTIVE */
+  .nav-links.active {
+    opacity: 1;
+    transform: translateX(0); /* Slides back to its original right: 5% position */
+    pointer-events: auto;     /* Re-enables clicking on the links */
+  }
+  
+  /* Base Hamburger Button */
+  .hamburger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px; /* Spacing between the lines */
+    width: 20px;
+    height: 30px;
+    padding: 0;
+  }
+  
+  /* Base Individual Lines */
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #F2F2F2; /* Change to your preferred color */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out; /* Makes the animation smooth */
+  }
+  
+  /* Top Line: Rotates down 45 degrees and moves into center */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  /* Middle Line: Fades out completely */
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px); /* Optional: slides it out to the left */
+  }
+  /* Bottom Line: Rotates up 45 degrees and moves into center */
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .logo {
+    font-weight: 800;
+  }
+  
+  /* END OF NAV AND TOP NAVIGATION */
+  
+  
+  
+  .hero-background {border: 2px solid red;
+    position: relative;
+    top: 10;
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Background Image Configurations */
+    background-image: url('https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* ==========================================================================
+     DARK TEXT PROTECTION OVERLAY
+     ========================================================================== */
+     .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+      z-index: 1; /* Sits directly on top of the image */
+    }
+  
+    /* ==========================================================================
+     HERO TYPOGRAPHY & CONTENT
+     ========================================================================== */
+  .hero-content {border: 2px solid blue;
+    text-align: left;
+    padding: 20px;
+    position: relative;
+    top: 100px;
+    left: -20px;
+    z-index: 2; /* Sits safely on top of the dark overlay shadow */
+    max-width: 600px;
+    color: #ffffff; /* Forces text to be white for contrast */
+  }
+  
+  .hero-content h1 {border: 2px solid blue;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Soft off-white to make the heading pop more */
+  }
+  
+  /* ==========================================================================
+     HERO ACTION BUTTONS
+     ========================================================================== */
+  .hero-buttons {
+    display: flex;
+    flex-direction: column; /* Stacked vertical buttons on small screens */
+    gap: 15px;
+  }
+  .cta-btn {
+    border: 1px solid red;
+  
+  }
+  .hero-buttons a {
+    display: inline-block;
+    padding: 14px 28px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: greenyellow; /* Matches your accent layout color */
+    color: #111;
+  }
+  .btn-secondary {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  /* Because we are no longer using display: none, make sure your desktop */
+   /* media query resets these properties so the menu doesn't try to slide around on large screens: */
+  /* ==========================================================================
+     DESKTOP STYLES (Applies only to screens wider than 768px)
+     ========================================================================== */
+  @media (min-width: 769px) {
+    /* 1. Hide the hamburger button on desktop */
+    .hamburger {
+      display: none;
+    }
+  
+    /* 2. Force the menu to always show horizontally on desktop */
+    .nav-links {
+     /* Reset the mobile slide properties */
+     opacity: 1 !important;
+     transform: none !important;
+     pointer-events: auto !important;
+     
+     /* Your desktop layout rules */
+     position: static;
+     flex-direction: row;
+     width: auto;
+     padding: 0;
+     background-color: transparent;
+    }
+  
+    /* HERO SECTION DESKTOP */
+    .hero-section {
+      min-height: 90vh; /* Gives desktop layouts breathing room */
+    }
+  
+    .hero-content h1 {
+      font-size: 3.5rem; /* Larger font size for wide screens */
+    }
+  
+    .hero-content {
+      max-width: 800px;
+    }
+    
+  }
+  

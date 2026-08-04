@@ -3,87 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frai-Cop | Professional Consulting & HR Software Solutions</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   
+
+    <title>Frai-Cop</title>
 </head>
 <body>
 
-    <!-- THE GLOBAL NAV HEADER -->
-    <header>
-        <div class="logo">Frai-Cop</div>
-        <nav>
+    <nav class="navbar" id="mainNavbar">
+        <div class="nav-container">
+          <!-- One Clean Logo Source -->
+          <a href="#" class="logo">Frai-Cop</a>
+          
+          <!-- Unified Desktop Links -->
+          <div class="nav-links" id="navLinks">
             <a href="#hero">Who We Help</a>
-            <a href="#services">Our Approach</a>
-            <a href="#agriculture">Social Impact</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
-    </header>
+            <a href="#hr-software">HR Systems</a>
+            <a href="#skills-audits">Skills Audits</a>
+            <a href="#contact" class="nav-btn-desktop">Contact Us</a>
+          </div>
+      
+          <!-- Mobile Interactive Controls -->
+          <div class="mobile-controls">
+            <!-- <a href="#contact" class="nav-btn-mobile">Contact</a> -->
+            <button class="hamburger" id="menuToggle" aria-label="Toggle Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+    </nav>
+    <!-- END OF NAV -->
 
-    <main>
-        <!-- 🎫 FRAI-102: SECTION 1 — THE MODERN HERO SPLIT -->
-        <section id="hero">
-            <div class="hero-text">
-                <h1>Build corporate structures that scale.</h1>
-                <p>Welcome to Frai-Cop (Frainah's Consulting and Projects). We specialize in web-based Human Resource Software Modules, Corporate Skills Audits, and Educational Engineering Support.</p>
-                <a href="#contact" class="cta-btn">Book a Consultation</a>
-            </div>
-            <div class="hero-image">
-                <!-- Image placeholder for FRAI-103 -->
-                <img src="https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Corporate office consultants collaborating on modern cloud software">
-            </div>
-        </section>
+    <!-- Main site body content -->
+    <section id="hero" class="hero-background">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+          <p class="sml-text">Supporting Your Goal</p>
+        <h1>Build corporate structures that scale.</h1>
+        <p class="sml-text">
+          <!-- Welcome to Frai-Cop (Frainah's Consulting and Projects). We -->
+         we specialize in web-based Human Resource Software Modules, Corporate
+          Skills Audits, and Educational Engineering Support.
+        </p>
+        <a href="#contact" class="cta-btn">Book a Consultation</a>
+      </div>
+      <!-- <div class="hero-image">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Corporate office consultants collaborating on modern cloud software"
+        />
+      </div> -->
+    </section>
 
-        <!-- 🎫 FRAI-102: SECTION 2 — THE SERVICE GRID (3 CORE PILLARS) -->
-        <section id="services">
-            <h2>Designed for experts who want to work smarter.</h2>
-            <p>Our structural frameworks streamline workplace delivery and corporate compliance.</p>
-            
-            <div class="grid-container">
-                <!-- Pillar 1 -->
-                <article class="service-card">
-                    <h3>HR Software Modules</h3>
-                    <p>Web-based people development management systems including Skills Profiling, Performance Management, Training Administration, Employment Equity, and Workplace Skills Plan (WSP) modules.</p>
-                </article>
-
-                <!-- Pillar 2 -->
-                <article class="service-card">
-                    <h3>Competency Profiling & Skills Audits</h3>
-                    <p>Comprehensive profiling and workforce skills audits to align your current human resource capacities with organizational growth targets and industry standards.</p>
-                </article>
-
-                <!-- Pillar 3 -->
-                <article class="service-card">
-                    <h3>Technology Support in Education</h3>
-                    <p>Providing specialized training equipment and technology support systems for educational institutions to effectively prepare future engineers, scientists, and corporate leaders.</p>
-                </article>
-            </div>
-        </section>
-
-        <!--  THE SOCIAL IMPACT -->
-        <section id="agriculture">
-            <div class="social-card">
-                <h2>Rural Natural Resource Management Project</h2>
-                <p>A specialized developmental project focused on rural natural resource management and agricultural sustainability. Saving time at the office to secure sustainable food ecosystems across communities.</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>We're here to help your business move forward</h2>
-            <p>Reach out to our team for questions, corporate profiling decks, or scheduling next steps.</p>
-            
-            <form action="mailto:info@fraicop.co.za" method="POST" enctype="text/plain">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Corporate Email" required>
-                <textarea placeholder="How can we help your team?" required></textarea>
-                <button type="submit">Submit Message</button>
-            </form>
-        </section>
-        
-    </main>
-
-    <!-- GLOBAL FOOTER -->
-    <footer>
-        <p>&copy; 2026 Frai-Cop (Pty) Ltd. All rights reserved. Powered by Refilwe Engineering.</p>
-    </footer>
-
+    <script src="main.js"></script>
 </body>
 </html>
