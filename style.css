@@ -6,10 +6,11 @@
   
    /* Defaults for all content */
   html, body {
-    border: 2px solid black;
-    font-family: "Inter", sans-serif; 
+    background-color: #000000;
+    font-family: "Outfit", sans-serif; 
     font-size: 14px;
     line-height: 1.5;
+    /* letter-spacing: 0.2px; */
     color: #F2F2F2;
     /* background-color: #fff; */
     min-height: 100vh;        /* Forces body to take full screen height */
@@ -17,6 +18,15 @@
     margin: 0;
     overflow-x: hidden; /* Cuts off anything pushed off the left or right edges */
   
+  }
+
+  /* FONTS */
+  .sml-text {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 20px 0;
+    color: #e0e0e0;
   }
   
   /* 3. Media Reset (Crucial for layouts) */
@@ -35,7 +45,6 @@
      ========================================================================== */
   .navbar {
     padding: 20px;
-    border: 1px solid blue;
     position: absolute;
     top: 0;
     left: 0;
@@ -135,7 +144,7 @@
   
   
   
-  .hero-background {border: 2px solid red;
+  .hero-background {
     position: relative;
     top: 10;
     min-height: 100vh; 
@@ -145,7 +154,7 @@
     justify-content: center;
     
     /* Background Image Configurations */
-    background-image: url('https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+    background-image:linear-gradient(90deg, #000000, transparent),url('https://plus.unsplash.com/premium_photo-1677529496297-fd0174d65941?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,42 +166,42 @@
   /* ==========================================================================
      DARK TEXT PROTECTION OVERLAY
      ========================================================================== */
-     .hero-overlay {
+     /* .hero-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
-      z-index: 1; /* Sits directly on top of the image */
-    }
+      z-index: 1; 
+    } */
   
     /* ==========================================================================
      HERO TYPOGRAPHY & CONTENT
      ========================================================================== */
-  .hero-content {border: 2px solid blue;
+  .hero-content {width: 100%;
+    /* border: 2px solid blue; */
     text-align: left;
     padding: 20px;
     position: relative;
-    top: 100px;
+    top: 130px;
     left: -20px;
     z-index: 2; /* Sits safely on top of the dark overlay shadow */
-    max-width: 600px;
+    /* max-width: 80vw; */
     color: #ffffff; /* Forces text to be white for contrast */
   }
   
-  .hero-content h1 {border: 2px solid blue;
-    font-size: 2.2rem;
+  .hero-content h1 {
+    /* border: 2px solid blue; */
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 5px;
     width: 100%;
   }
-  .hero-content p {
-    font-size: 1rem;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    color: #e0e0e0; /* Soft off-white to make the heading pop more */
+  .hero-content .slogan {
+    font-weight: bold;
+    letter-spacing: 0.5px;
   }
   
   /* ==========================================================================
@@ -204,27 +213,127 @@
     gap: 15px;
   }
   .cta-btn {
-    border: 1px solid red;
-  
+    background-color: #cf4c00;
+    display: inline-block;
+    padding: 14px 28px;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+
   }
-  .hero-buttons a {
+
+ /* ==========================================================================
+     BRANDS SECTION
+     ========================================================================== */
+     .brands {border: 1px solid red;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+     }
+     .brands h3 {
+      text-align: center;
+      padding: 12px 0;
+      line-height: 1.4;
+     }
+     .brands-grid {
+      border: 1px solid red;
+     }
+
+     .brands-grid ul {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+     }
+.brands-grid ul li {
+  border: 1px solid blue;
+  /* width: 20%; */
+  padding: 8px 16px;
+}
+    /* ==========================================================================
+     ABOUT SECTION
+     ========================================================================== */
+      /* Container styling using Outfit Font */
+.about-section {
+  font-family: 'Outfit', sans-serif;
+  padding: 60px 20px;
+  /* background-color: #1a1a1a; */
+  color: #ffffff;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr; /* Stack into 1 column on mobile */
+  gap: 32px;
+}
+
+/* Heading Typography */
+.about-section h2, .about-section h3 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #F2F2F2;
+  text-align: center;
+}
+
+.card-icon {
+  width: 24px;
+  height: 24px;
+  color: #4f46e5; /* Modern accent color for icons */
+  flex-shrink: 0;
+}
+
+.about-section h2 { font-size: 2rem; }
+.about-section h3 { font-size: 1.8rem; }
+.about-lead { font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; }
+
+/* Grid layout for services */
+.offerings-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.offering-card {
+  background-color: #141414;
+  padding: 20px;
+  border-radius: 8px;
+  /* border: 2px solid red; */
+}
+
+.offering-card h4 {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #F2F2F2;
+}
+
+
+
+
+     /* END OF ABOUT */
+  /* .hero-buttons a { border: 2px solid black;
     display: inline-block;
     padding: 14px 28px;
     text-decoration: none;
     font-weight: 600;
     border-radius: 6px;
     transition: all 0.3s ease;
-  }
+  } */
   
-  .btn-primary {
-    background-color: greenyellow; /* Matches your accent layout color */
+  /* .btn-primary {
+    background-color: greenyellow; 
     color: #111;
-  }
-  .btn-secondary {
+  } */
+  /* .btn-secondary {
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
-  }
+  } */
   /* Because we are no longer using display: none, make sure your desktop */
    /* media query resets these properties so the menu doesn't try to slide around on large screens: */
   /* ==========================================================================
@@ -265,4 +374,12 @@
     }
     
   }
-  
+  /* Responsive Desktop Layout split into two halves */
+/* @media (min-width: 768px) {
+  .about-container {
+    grid-template-columns: 2fr 3fr;
+  }
+  .offerings-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
