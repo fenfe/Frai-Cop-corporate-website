@@ -10,6 +10,7 @@
     font-family: "Outfit", sans-serif; 
     font-size: 14px;
     line-height: 1.5;
+    font-weight: 400;
     /* letter-spacing: 0.2px; */
     color: #F2F2F2;
     /* background-color: #fff; */
@@ -23,8 +24,8 @@
   /* FONTS */
   .sml-text {
     font-size: 14px;
-    font-weight: normal;
-    line-height: 1.4;
+    font-weight: 400;
+    line-height: 20px;
     margin: 20px 0;
     color: #e0e0e0;
   }
@@ -35,7 +36,28 @@
     max-width: 100%;
   }
   
-  
+  h2 {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 400;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+    border: 1px solid greenyellow;
+    padding: 10px 0   ;
+  }
+  h4 {
+    color: white;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color:  #fffc;
+  }
   a {
     text-decoration: none;
     color: #F2F2F2;
@@ -193,40 +215,48 @@
   
   .hero-content h1 {
     /* border: 2px solid blue; */
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: 5px;
-    width: 100%;
+    font-weight: 400;
+    line-height: 40px;
+    font-size: 36px;
+    font-style: normal;
+  }
+  p{
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
   }
   .hero-content .slogan {
     font-weight: bold;
     letter-spacing: 0.5px;
   }
-  
+  .hero-content p {
+    text-align: left;
+  }
   /* ==========================================================================
      HERO ACTION BUTTONS
      ========================================================================== */
-  .hero-buttons {
-    display: flex;
-    flex-direction: column; /* Stacked vertical buttons on small screens */
-    gap: 15px;
-  }
+  
   .cta-btn {
     background-color: #cf4c00;
     display: inline-block;
+    width: 100%;
     padding: 14px 28px;
-    font-weight: 600;
-    border-radius: 6px;
+    font-weight: 500;
+    border-radius: 2px;
     transition: all 0.3s ease;
-
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 40px;
   }
 
  /* ==========================================================================
      BRANDS SECTION
      ========================================================================== */
-     .brands {border: 1px solid red;
-      padding: 20px;
+     .brands { border: 1px solid red;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -235,32 +265,45 @@
      .brands h3 {
       text-align: center;
       padding: 12px 0;
-      line-height: 1.4;
+      line-height: 20px;
+      color: #ffffff80;
+      font-size: 14px;
+      font-weight: 500;
      }
-     .brands-grid {
-      border: 1px solid red;
-     }
+  
 
      .brands-grid ul {
       list-style-type: none;
       display: flex;
+      justify-content: center;
       align-items: center;
       align-content: center;
       flex-wrap: wrap;
       gap: 10px;
+      padding:  10px;
      }
 .brands-grid ul li {
-  border: 1px solid blue;
-  /* width: 20%; */
-  padding: 8px 16px;
+  box-shadow: 30px 0 40px rgba(0,0,0,0.1),
+-30px 0 40px rgba(0,0,0,0.1); 
+  border: .5px solid #521f02;
+  border-radius: 3px;
+  padding: 10px 16px;
+  letter-spacing: .5px;
+  
 }
+  /* ==========================================================================
+     ABOUT SECTION
+     ========================================================================== */
+     
+
+
     /* ==========================================================================
      ABOUT SECTION
      ========================================================================== */
       /* Container styling using Outfit Font */
 .about-section {
-  font-family: 'Outfit', sans-serif;
-  padding: 60px 20px;
+  /* font-family: 'Outfit', sans-serif; */
+  padding: 40px 20px;
   /* background-color: #1a1a1a; */
   color: #ffffff;
 }
@@ -275,46 +318,87 @@
 
 /* Heading Typography */
 .about-section h2, .about-section h3 {
-  font-weight: 700;
+  /* font-weight: 400; */
   margin-bottom: 20px;
-  color: #F2F2F2;
+  /* color: #F2F2F2; */
   text-align: center;
 }
 
 .card-icon {
-  width: 24px;
-  height: 24px;
-  color: #4f46e5; /* Modern accent color for icons */
+  width: 32px;
+  height: 32px;
+  color: #f2f2f2da; /* Modern accent color for icons */
   flex-shrink: 0;
+  /* border: 1px solid red; */
+  /* padding-right: 10px; */
 }
-
-.about-section h2 { font-size: 2rem; }
-.about-section h3 { font-size: 1.8rem; }
-.about-lead { font-size: 1.2rem; font-weight: 500; margin-bottom: 15px; }
 
 /* Grid layout for services */
 .offerings-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  border: 2px solid white;
+  padding: 20px 0;
 }
 
 .offering-card {
   background-color: #141414;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 4px;
   /* border: 2px solid red; */
 }
 
 .offering-card h4 {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #F2F2F2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-bottom: 8px; */
+  color: #fffc;
+  /* border: 1px solid blue; */
+  padding-left: 10px;
+}
+.offering-card p {
+  text-align: left;
+  padding: 16px 0;
+}
+/* END OF OFFERINGS CARD */
+
+.agriculture {
+        border: 2px solid white;
+        padding: 10px;
+        /* padding:  10px; */
+}
+
+/* HIDE THE DESKTOP STICKY WRAPPER ON MOBILE */
+.desktop-sticky-media {
+  display: none;
+}
+  /* SINGLE COLUMN CONTENT BLOCK */
+  .scrolling-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+ /* MOBILE ROW CONTAINER */
+ .process-step-row {
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.process-step-row:last-child {
+  border-bottom: none;
+}
+
+.step-description {
+text-align: left;
 }
 
 
 
-
+/* END OF agriculture */
      /* END OF ABOUT */
   /* .hero-buttons a { border: 2px solid black;
     display: inline-block;
