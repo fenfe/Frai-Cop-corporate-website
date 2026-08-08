@@ -34,6 +34,7 @@
   img {
     display: block;
     max-width: 100%;
+    border-radius: 8px;
   }
   
   h2 {
@@ -44,7 +45,7 @@
   h3 {
     font-size: 24px;
     font-weight: 400;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
     padding: 10px 0   ;
   }
   h4 {
@@ -255,7 +256,7 @@
  /* ==========================================================================
      BRANDS SECTION
      ========================================================================== */
-     .brands { border: 1px solid red;
+     .brands { 
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -332,13 +333,21 @@
   /* border: 1px solid red; */
   /* padding-right: 10px; */
 }
-
+.agriculture h3{
+  /* border: 2px solid red; */
+  line-height: 32px;
+  /* text-align: center; */
+}
+.centered {
+  text-align: center;
+  margin-bottom: 40px;
+}
 /* Grid layout for services */
 .offerings-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   padding: 20px 0;
 }
 
@@ -365,7 +374,7 @@
 /* END OF OFFERINGS CARD */
 
 .agriculture {
-        border: 2px solid white;
+        /* border: 2px solid white; */
         padding: 10px;
         /* padding:  10px; */
 }
@@ -382,8 +391,9 @@
 }
  /* MOBILE ROW CONTAINER */
  .process-step-row {
-  padding-bottom: 40px;
-  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 32px;
+  /* border: 2px solid red; */
+  border-bottom: .5px solid #f2f2f262;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -397,6 +407,81 @@ text-align: left;
 }
 
 
+/* CONTACT US STYLES */
+.contact-text {
+  /* border: 2px solid red; */
+  margin-top: 16px;
+  padding-left: 16px;
+}
+.contact-text p {
+  text-align: left;
+  padding: 16px 0;
+}
+.contact .offering-card {
+  background-color: #000000;
+  padding-bottom: 0;
+}
+.contact .offering-card h4 {
+  /* border: 1px solid red; */
+    font-size: 16px;
+  color: #ffffff80;
+  padding-left: 0;
+}
+
+.contact .offering-card p {
+  padding: 0px;
+  padding-left: 10px;
+  padding-top: 6px;
+  /* padding-top: 8px; */
+  color: white;
+}
+
+/* FORM STYLES */
+form {
+  /* border: 2px solid blue; */
+  padding: 20px;
+  border-bottom: 1px solid #ffffff80;
+
+}
+.form-inputs {
+  /* border: 2px solid yellow; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-family: 'Outfit', sans-serif;
+  background-color: #000000;
+  color: #F2F2F2;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border: none;
+  border-bottom: 1px solid #ffffff80;
+}
+form p {
+  padding: 16px 0;
+}
+form > .cta-btn {
+  border: none;
+}
+
+footer {
+  padding: 40px;
+}
+footer p {
+  padding: 10px 0;
+}
+.designer {
+  padding: 20px;
+}
+.designer span {
+  /* color: red; */
+  font-style: oblique;
+}
 
 /* END OF agriculture */
      /* END OF ABOUT */
