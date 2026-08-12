@@ -292,55 +292,32 @@
   letter-spacing: .5px;
   
 }
+ /* ==========================================================================
+    END OF BRANDS SECTION
+     ========================================================================== */
+    
+
   /* ==========================================================================
      ABOUT SECTION
      ========================================================================== */
-     
-
-
-    /* ==========================================================================
-     ABOUT SECTION
-     ========================================================================== */
-      /* Container styling using Outfit Font */
-.about-section {
-  /* font-family: 'Outfit', sans-serif; */
+     .about-section {
+      border: 1px solid red;
   padding: 40px 20px;
-  /* background-color: #1a1a1a; */
   color: #ffffff;
 }
-
-.about-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr; /* Stack into 1 column on mobile */
-  gap: 32px;
+/* ==========================================================================
+    END OF ABOUT SECTION
+     ========================================================================== */
+      
+   /* ==========================================================================
+     ABOUT-OFFERINGS/services cards SECTION
+     ========================================================================== */
+.about-offerings {
+  border: 2px solid yellow;
+  padding: 40px 20px;
 }
-
-/* Heading Typography */
-.about-section h2, .about-section h3 {
-  /* font-weight: 400; */
-  margin-bottom: 20px;
-  /* color: #F2F2F2; */
+.about-offerings h3 {
   text-align: center;
-}
-
-.card-icon {
-  width: 32px;
-  height: 32px;
-  color: #f2f2f2da; /* Modern accent color for icons */
-  flex-shrink: 0;
-  /* border: 1px solid red; */
-  /* padding-right: 10px; */
-}
-.agriculture h3{
-  /* border: 2px solid red; */
-  line-height: 32px;
-  /* text-align: center; */
-}
-.centered {
-  text-align: center;
-  margin-bottom: 40px;
 }
 /* Grid layout for services */
 .offerings-grid {
@@ -350,27 +327,50 @@
   /* border: 2px solid white; */
   padding: 20px 0;
 }
-
 .offering-card {
   background-color: #141414;
   padding: 20px;
   border-radius: 4px;
   /* border: 2px solid red; */
 }
-
+.card-icon {
+  width: 32px;
+  height: 32px;
+  color: #f2f2f2da; 
+  flex-shrink: 0;
+}
 .offering-card h4 {
   display: flex;
   flex-direction: column;
   gap: 10px;
   /* margin-bottom: 8px; */
   color: #fffc;
-  /* border: 1px solid blue; */
-  padding-left: 10px;
+  /* padding-left: 10px; */
 }
 .offering-card p {
   text-align: left;
   padding: 16px 0;
 }
+   /* ==========================================================================
+    END OF ABOUT-OFFERINGS SECTION
+     ========================================================================== */
+
+
+
+.agriculture h3{
+  /* border: 2px solid red; */
+  line-height: 32px;
+  /* text-align: center; */
+}
+.centered {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+
+
+
 /* END OF OFFERINGS CARD */
 
 .agriculture {
