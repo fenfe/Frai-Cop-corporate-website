@@ -355,7 +355,79 @@
     END OF ABOUT-OFFERINGS SECTION
      ========================================================================== */
 
+/* DASHBOARD STYLING ENGINE COMPONENTS */
+.dash-btn {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+.dash-btn:hover {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.dash-btn.active {
+  background-color: #cf4c00; /* Injects your custom bright orange theme highlight */
+  color: #ffffff;
+  border-color: #cf4c00;
+}
+.dash-content {
+  display: none;
+}
+.dash-content.active-content {
+  display: block !important;
+}
+.dash-content ul li {
+  padding-left: 20px;
+  position: relative;
+  color: rgba(255,255,255,0.8);
+}
 
+
+     .education-section {
+      padding: 80px 20px;
+      background-color: #000000;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border: 2px solid red;
+     }
+     /* .education-container {
+      max-width: 1200px;
+      margin: 0 auto;
+  } */
+  .education-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.education-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    border: 2px solid white;
+}
+.spec-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  border: 1px solid white;
+}
+
+.spec-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #cf4c00;
+  border-radius: 50%;
+  margin-top: 6px;
+}
 
 .agriculture h3{
   /* border: 2px solid red; */
@@ -482,6 +554,8 @@ footer p {
   /* color: red; */
   font-style: oblique;
 }
+/* //////////////////////////////////////////////// */
+
 
 /* END OF agriculture */
      /* END OF ABOUT */
@@ -508,7 +582,7 @@ footer p {
   /* ==========================================================================
      DESKTOP STYLES (Applies only to screens wider than 768px)
      ========================================================================== */
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     /* 1. Hide the hamburger button on desktop */
     .hamburger {
       display: none;
@@ -542,7 +616,22 @@ footer p {
       max-width: 800px;
     }
     
+
+    /* education  */
+    .competency-container {
+      flex-direction: row;
+      justify-content: space-between;
   }
+  .competency-main { flex-basis: 55%; }
+  .competency-side { flex-basis: 38%; }
+  
+  .education-grid {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  /* .edu-info-pane { flex-basis: 45%; }
+  .edu-specs-pane { flex-basis: 50%;border: 2px solid yellow; }
+  } */
   /* Responsive Desktop Layout split into two halves */
 /* @media (min-width: 768px) {
   .about-container {

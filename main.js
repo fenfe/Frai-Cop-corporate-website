@@ -25,6 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
   
+// DYNAMIC COMPONENT PANEL TAB SWITCH CONTROLLER
+function switchHrTab(event, contentId) {
+    // 1. Remove active-content class from all dashboard panels
+    document.querySelectorAll('.dash-content').forEach(panel => {
+        panel.classList.remove('active-content');
+    });
+    
+    // 2. Remove active class from all dashboard menu buttons
+    document.querySelectorAll('.dash-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // 3. Mount display visibility onto the selected module card
+    document.getElementById(contentId).classList.add('active-content');
+    
+    // 4. Highlight the current active button tab layout
+    event.currentTarget.classList.add('active');
+  }
+  
   // <!--  agriculture  -->
   
    // 1. Grab all the scroll rows and desktop image tags
