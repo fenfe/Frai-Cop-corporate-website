@@ -39,7 +39,7 @@
   
   h2 {
     font-size: 32px;
-    line-height: 35px;
+    line-height: 38px;
     font-weight: 400;
   }
   h3 {
@@ -395,6 +395,11 @@
       background-color: #000000;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       border: 2px solid red;
+      display: flex;
+      flex-direction: column;
+     }
+     .education-section > * {
+      /* border: 1px solid white; */
      }
      /* .education-container {
       max-width: 1200px;
@@ -403,6 +408,10 @@
   .education-header {
     text-align: center;
     margin-bottom: 5px;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .education-grid {
@@ -410,7 +419,7 @@
     flex-direction: column;
     gap: 30px;
     margin-top: 40px;
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 .spec-row {
   display: flex;
@@ -418,17 +427,88 @@
   gap: 15px;
   align-items: flex-start;
   margin-bottom: 15px;
-  border: 1px solid white;
-}
+  /* box-shadow: 0 4px 12px rgba(61, 60, 60, 0.356); */
+  border-radius: 6px;
+  border: 1px solid #cf4c0041;
+  padding: 16px;
 
-.spec-dot {
-  width: 8px;
-  height: 8px;
+}
+.spec-row p {
+  text-align: left;
+  letter-spacing: .5px;
+}
+.spec-row .pic {
+  width: 100%;       /* Responds to your layout or grid */
+  height: 250px;     /* Forces all divs to have the exact same height */
+  overflow: hidden;
+}
+.spec-row .pic > img {
+  width: 100%;       /* Spans the full width of the div */
+  height: 100%;      /* Spans the full height of the div */
+  object-fit: cover;
+}
+/* END OF PEOPLE AND PRGANIZATION EXTENDED */
+
+.skills {
+  border: 2px solid greenyellow;
+  padding: 20px;
+}
+.skills > div {
+  border: 2px solid purple;
+}
+.skills-header h2 , p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skills-left h4 {
+  padding: 10px 0;
+  text-align: center;
+}
+.skills-left ul {
+  list-style-type: none;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 10px 0;
+}
+.skills-left li {
+  display: flex;
+  flex-direction: column;
+}
+.skills-left span {
+  /* border: 1px solid red; */
+  color: #cf4c00;
+  /* font-weight: 600; */
+}
+.skills-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills-right > div {
+  border: 1px solid #521f02;
+  padding: 20px;
+  background-color: #141414;
+  border-radius: 4px;
+}
+.skills-right p {
+  text-align: left;
+  padding: 10px 0;
+}
+.skills .dictionary-badges {
+  display: flex;
+  gap: 8px;
+  border-radius: 4px;
+}
+.skills-right .badge {
   background-color: #cf4c00;
-  border-radius: 50%;
-  margin-top: 6px;
+  padding: 8px 12px;
 }
-
+.skills-right .competency-box > a {
+border-bottom: 1px solid purple;
+padding: 4px 0;
+}
 .agriculture h3{
   /* border: 2px solid red; */
   line-height: 32px;
@@ -629,9 +709,9 @@ footer p {
       flex-direction: row;
       justify-content: space-between;
   }
-  /* .edu-info-pane { flex-basis: 45%; }
+  .edu-info-pane { flex-basis: 45%; }
   .edu-specs-pane { flex-basis: 50%;border: 2px solid yellow; }
-  } */
+  } 
   /* Responsive Desktop Layout split into two halves */
 /* @media (min-width: 768px) {
   .about-container {
@@ -640,4 +720,4 @@ footer p {
   .offerings-grid {
     grid-template-columns: repeat(3, 1fr);
   }
-} */
+}*/
