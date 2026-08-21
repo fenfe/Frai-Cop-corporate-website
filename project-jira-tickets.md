@@ -33,3 +33,15 @@ DAY 1 = DONE
      matching corporate office-formal and educational tech settings.
   2. Assign valid, descriptive 'alt' attribute text mappings to every <img> 
      tag to satisfy accessibility and search engine visibility protocols.
+
+
+let megive u my sections headings and u modify the headings to be catchy nice elegant modern whatever u call it. after hero scetion
+section 1 = about us
+section 2 = featured services = 3 cards (people & organization, tech & education, agri & aqua culture ).
+section 3 = Competency Profiling & Skills Audits (this section gives more details about the a card from section 2)
+section 4 = Fair & Unbiased Competency Assessments
+(this section gives more details about the a card from section 2)
+section 5 = Web-Based HR Modules(HR SOFTWARE)(this section gives more details about the a card from section 2)
+section 6 = Building Sustainable Communities Together(more details about aqua culture and farming)
+section 7 = we are here to help u move foward(company map location, office hours, contacts and a form ).
+please create a nice heading for each section
