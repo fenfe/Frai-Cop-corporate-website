@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
   }
+ 
   
    /* Defaults for all content */
   html, body {
@@ -18,9 +19,20 @@
     padding: 0;               /* Removes default browser margins/paddings */
     margin: 0;
     overflow-x: hidden; /* Cuts off anything pushed off the left or right edges */
-  
+  width: 100%;
+  max-width: 100%;
   }
+  html {
+    width: 100%;
+    max-width: 100%;
+}
 
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Keeps things neat on real devices */
+    position: relative;
+}
   /* FONTS */
   .sml-text {
     font-size: 14px;
@@ -34,6 +46,7 @@
   img {
     display: block;
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
   }
   
@@ -764,30 +777,50 @@ footer p {
     /* 2. Force the menu to always show horizontally on desktop */
     .nav-links {
      /* Reset the mobile slide properties */
+     /* opacity: 1 !important;
+     transform: none !important;
+     pointer-events: auto !important; */
+     
+     /* Your desktop layout rules */
+     /* position: static;
+     flex-direction: row;
+     width: auto;
+     padding: 0;
+     background-color: transparent; */
      opacity: 1 !important;
      transform: none !important;
      pointer-events: auto !important;
-     
-     /* Your desktop layout rules */
      position: static;
      flex-direction: row;
      width: auto;
      padding: 0;
      background-color: transparent;
+     gap: 30px; 
     }
-  
+ /* 3. Link color corrections for dark/transparent header background */
+ .nav-links a {
+  color: #F2F2F2; /* Flips dark mobile text back to white for desktop contrast */
+  padding: 0;
+}
+   /* 4. Fix Hero Typography & Layout for Wide Screens */
+   .hero-content {
+    max-width: 600px; /* Stops your hero content from stretching too wide */
+    top: 0;           /* Resets your mobile layout pushdown */
+    margin-left: 0;   /* Resets the mobile offset adjustments */
+    padding: 0 40px;  /* Clean alignment spacing */
+  }  
     /* HERO SECTION DESKTOP */
-    .hero-section {
+    /* .hero-section {
       min-height: 90vh; /* Gives desktop layouts breathing room */
-    }
-  
-    .hero-content h1 {
-      font-size: 3.5rem; /* Larger font size for wide screens */
-    }
-  
+    
+      .hero-content h1 {
+        font-size: 56px;   /* Larger, bolder typography scales beautifully on desktop */
+        line-height: 64px;
+      }
+/*   
     .hero-content {
       max-width: 800px;
-    }
+    } */
     
 
     /* education  */
